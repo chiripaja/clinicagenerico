@@ -1,0 +1,24 @@
+.input-field{
+    @apply col-span-1 sm:col-span-2 border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
+}
+.label-password{
+    @apply sm:col-start-2 sm:col-span-2 text-xs text-gray-500
+}
+.div-container-form{
+    @apply grid grid-cols-1 sm:grid-cols-3 gap-4 py-8  px-10 bg-white shadow-lg rounded-lg;
+}
+.div-container{
+    @apply w-full  sm:w-[450px] px-5;
+}
+.div-main{
+    @apply flex items-center justify-center h-screen bg-gray-400;
+}
+.div-container-title{
+    @apply  sm:col-span-3 text-center text-xl font-semibold text-gray-700;
+}
+.div-container-img{
+    @apply col-span-1 sm:col-span-3 mx-auto mb-4 w-44;
+}
+.div-container-span{
+    @apply text-red-400 cursor-pointer;
+}

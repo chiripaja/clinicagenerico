@@ -1,0 +1,65 @@
+<div class="min-h-screen flex flex-col lg:flex-row">
+    <!-- Sidebar -->
+    <aside class="w-full lg:w-64 bg-white shadow-md">
+      <div class="flex items-center justify-center py-6">
+        <img src="./assets/img/logo.png" alt="Logo" class="h-32 w-32 rounded-full">
+      </div>
+      <div class="px-6">
+        <h1 class="text-center text-lg font-bold">Clínica "San Miguel"</h1>
+        <ul class="mt-6 space-y-4">
+          <li [routerLink]="['dashboard']" class="flex items-center text-gray-700 hover:text-blue-500 cursor-pointer">
+            <span class="inline-block mr-3">
+              <i class="fas fa-user"></i> <!-- Cambiar ícono según necesidad -->
+            </span>
+            <a  class="font-medium">Dashboard</a>
+          </li>
+          <li  [routerLink]="['citas']"  class="flex items-center text-gray-700 hover:text-blue-500 cursor-pointer">
+            <span class="inline-block mr-3">
+              <i class="fas fa-file-alt"></i> <!-- Cambiar ícono según necesidad -->
+            </span>
+            <a class="font-medium">Citas</a>
+          </li>
+          <li [routerLink]="['admision']"  class="flex items-center text-gray-700 hover:text-blue-500 cursor-pointer">
+            <span class="inline-block mr-3">
+              <i class="fas fa-calendar"></i> <!-- Cambiar ícono según necesidad -->
+            </span>
+            <a class="font-medium">Admision</a>
+          </li>
+          <li [routerLink]="['']"  class="flex items-center text-gray-700 hover:text-blue-500 cursor-pointer">
+            <span class="inline-block mr-3">
+              <i class="fas fa-arrow-right-from-bracket"></i> <!-- Cambiar ícono según necesidad -->
+            </span>
+            <a class="font-medium">Cerrar Sesion</a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+  
+    <!-- Main content with top bar -->
+    <div class="flex-1 flex flex-col bg-gray-100">
+      <!-- Top bar -->
+      <header class="bg-white shadow p-4 flex justify-between items-center">
+        <h2 class="text-xl font-bold text-gray-800">Panel de Administración</h2>
+        <div class="flex items-center space-x-4">
+          
+          <div class="relative">
+            <a class="text-gray-600 hover:text-blue-500 flex items-center" [routerLink]="['']">
+              <i class="fas fa-arrow-right-from-bracket text-2xl"></i> <!-- Perfil -->
+              <span class="ml-2 font-medium">Logout</span>
+            </a>
+            <!-- Dropdown -->
+            <div class="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md py-2 hidden">
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Perfil</a>
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Cerrar Sesión</a>
+            </div>
+          </div>
+        </div>
+      </header>
+  
+      <!-- Page content -->
+      <div class="flex-1  ">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+  

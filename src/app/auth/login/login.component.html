@@ -1,0 +1,15 @@
+<div class="div-main">
+    <div class="div-container">
+      <form class="div-container-form" [formGroup]="form" (ngSubmit)="GuardarCambios()">
+        <img src="./assets/img/user.png" alt="Logo" class="div-container-img">
+        <h2 class="div-container-title">¡Bienvenido!</h2>
+        <label for="usuario" class="text-gray-600">Usuario:</label>
+        <input type="text" id="usuario" class="input-field" formControlName="user">
+        <label for="password" class="text-gray-600">Contraseña:</label>
+        <input type="password" id="password" class="input-field" formControlName="password">
+        <div class="label-password">¿Eres un nuevo usuario? <span class="div-container-span">Click aqui</span></div>
+        <button type="submit" class="sm:col-span-3 btn-blue">Ingresar</button>
+      </form>
+    </div>
+  </div>
+  
